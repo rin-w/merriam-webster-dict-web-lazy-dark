@@ -1,0 +1,318 @@
+/* ==UserStyle==
+@name           merriam-webbo
+@author         7aint
+@namespace      github.com/openstyles/stylus
+@version        1
+@updateURL      https://userstyles.world/api/style/9537.user.css
+@preprocessor stylus
+@var checkbox noWidgets "Hide widgets" 0
+@var checkbox noExtraNav "Hide extra menu" 0
+==/UserStyle== */
+
+@-moz-document regexp("http(|s):\\/\\/(|www.)merriam-webster.com\\/(thesaurus|dictionary)\\/.*") {
+  
+  if noWidgets == 1 {
+    .right-rail,
+    #unabridged-promo,
+    #definition-right-rail {
+      display: none;
+    }
+  }
+  if noExtraNav == 1 {
+    .navbar > .navigation-container {
+      display: none;
+    }
+  }
+  
+  :root {
+    scrollbar-color: #fff3 #0b1b25;
+    color-scheme: dark;
+    --bs-black-rgb: 150,150,195;
+    --bs-body-color: #a2afbd;
+    --bs-body-bg: #0a1017;
+
+    --deepest-blue: #08151d;
+    --deeper-blue: #01072e;
+    --deep-blue: #113661;
+    --deep-cyan: #0c364e;
+    --gray-8: #98a5b1;
+    --gray-7: #868d95;
+    --gray-6: #76858b;
+    --gray-5: #626262;
+    --gray-4: #494949;
+    --gray-3: #333638;
+    --gray-2: #292f32;
+    --gray-1: #14191b;
+  }
+  
+  a[title="Merriam Webster - established 1828"] > svg > path[fill="white"] {
+    fill: var(--deeper-blue)
+  } a[title="Merriam Webster - established 1828"] > svg > path[fill="white"] + path {
+    fill: #8a1115;
+  } a[title="Merriam Webster - established 1828"] > svg > path[fill="white"] + path + path {
+    fill: #a4cad7;
+  }
+
+  @media (min-width: 992px) { /* minor header layout */
+    .top-header .navbar { 
+      flex-wrap: nowrap;
+      height: 60px;
+    } 
+    .top-header .search-form-container {
+      max-width: 723px;
+    }
+  }
+  
+  .redesign-container { /* layout box;  meaning content */
+    background: linear-gradient(90deg,var(--deepest-blue) 50%,transparent 0);
+  }
+  .left-sidebar-col .left-sidebar::before { /* layout box;  meaning content */
+    background: linear-gradient(89.98deg,var(--deepest-blue) .02%,var(--deep-cyan) 60.41%,var(--deep-cyan) 96.1%,var(--deep-blue) 0,var(--deeper-blue));
+  }
+  .left-sidebar-col .left-sidebar .sidebar-container .sidebar-nav li.nav-list-divider {
+    background: #08151d;
+  }
+  .left-sidebar {
+    background: #08202e;
+  }
+  .left-sidebar ul.nav li.nav-item a.active span.nav-item-link-container {
+    background: #79828817;
+  }
+  .left-sidebar ul.nav li.nav-item a {
+    color: #a4cad7;
+  }
+
+  .top-header {
+    background: #0c364e;
+  }
+  .chevron-circle {
+    background: #0a1a27;
+    border: 1px solid #093563;
+  }
+  .bg-white {
+    --bs-bg-opacity: 0;
+  }
+  .redesign-container .container-fluid .left-content, .redesign-container .container-fluid .right-rail, .redesign-container .container-lg .left-content, .redesign-container .container-lg .right-rail, .redesign-container .container-md .left-content, .redesign-container .container-md .right-rail, .redesign-container .container-sm .left-content, .redesign-container .container-sm .right-rail, .redesign-container .container-xl .left-content, .redesign-container .container-xl .right-rail, .redesign-container .container-xxl .left-content, .redesign-container .container-xxl .right-rail {
+    background-color: var(--bs-body-bg);
+  }
+  input.search {
+    background: #1f457a3b !important;
+    color: #6f8da3;
+  }
+  .search-results-auto {
+    background: linear-gradient(180deg,var(--deepest-blue) 0.02%,var(--deep-cyan) 95.41%,var(--deep-cyan) 86.1%,var(--deep-blue) 0,var(--deeper-blue));
+  } .top-header.search-active .search-container.active::before {
+    background: #08151d;
+  } .top-header.search-active .search-container {
+    background: unset;
+  } 
+  .search-results-auto ul li a.active, .search-results-auto ul li a:focus, .search-results-auto ul li a:hover {
+    background: #1a8df229;
+  }
+  .search-results-auto span {
+    color: #818181;
+  }
+  .search-results-auto .search-results-title {
+    border-bottom: 2px solid #8a1115;
+    color: #3a84af;
+  }
+  .top-header.search-active .search {
+    border-bottom: 2px solid #280f0f !important;
+    background: #ffffff0d !important;
+    color: #9bb5c6;
+  } .top-header .search-button.search-dictionary,
+  .button-switcher-container .btn-toggle > .btn-switch {
+    background: #7a1014;
+    border-bottom: 2px solid #390007;
+  }
+  img[src="/dist-cross-dungarees/2023-04-24_20-07-11-e04c26f6/images/svg/redesign/ribben.svg"] {
+    filter: saturate(50%) brightness(95%);
+  }
+  .left-sidebar-col .left-sidebar .sidebar-container .sidebar-nav li.nav-item a.active {
+    background: radial-gradient(50% 151.74% at 50% 48.76%,#7a1014 0,#7a1014 100%);
+  }
+  .left-sidebar-col .left-sidebar .sidebar-container .sidebar-header {
+    padding-top: 12px;
+  }
+  .mw-badge-gray-300.play-pron-v2 {
+    background: #012035;
+    border: 1px solid #1e4b5e;
+    color: #67a7c5 !important;
+  } 
+  .left-content .play-pron-v2:hover,
+  .entry-header .word-syllables-prons-header-content .play-pron-v2:hover {
+    background: #09171d;
+    border: 1px solid #141e22;
+  } 
+  .entry-header .word-syllables-prons-header-content .play-pron-v2:active,
+  .left-content .play-pron-v2:active {
+    background: #003858!important;
+  }
+  .entry-header {
+    margin-top: 1em;
+  } 
+  .entry-uros .ure {
+    background-image: linear-gradient(90deg,var(--gray-8),rgb(148 158 169) 34.96%,var(--gray-7));
+  }
+  .redesign-container .il.il-badge,
+  .mw-badge-gray-100,
+  .entry-header .entry-header-content .entry-numbers-badge {
+    background: #ffffff21;
+    color: #9d9d9e;
+  } .redesign-container .il.il-badge {
+    background: #ffffff21 !important;
+  }
+  .example_sentences {
+    color: #9e9e9e;
+  }
+  .vg .vg-sseq-entry-item .vg-sseq-entry-item-thread-anchor { /* meaning section # vertical line */
+    background: linear-gradient(180deg,var(--gray-2),var(--gray-4) 17.8%,var(--gray-3) 81.87%,var(--gray-1));
+  } 
+  .vg .vg-sseq-entry-item .sb .sb-entry .letter, .vg .vg-sseq-entry-item .sb .sb-entry .num,
+  .vg .vg-sseq-entry-item .vg-sseq-entry-item-label {
+    color: #b7c2cd;
+  }
+  .synonyms-antonyms-content-lists .mw-grid-table-list li a,
+  .vg .vg-sseq-entry-item .sb .sb-entry .mw_t_d_link, .vg .vg-sseq-entry-item .sb .sb-entry .mw_t_sx {
+    color: #3384c2;
+  }
+  .entry-uros .uro .utxt .sub-content-thread .thread-anchor, .redesign-container .sub-content-thread .thread-anchor, .threaded-content-gray, .vg .vg-sseq-entry-item .sb .sb-entry .pseq .sub-content-thread .thread-anchor, .vg .vg-sseq-entry-item .sb .sb-entry .sense .sub-content-thread .thread-anchor, .word-history .sub-content-thread .thread-anchor { /* example on meaning vertical line */
+    background: linear-gradient(180deg,var(--gray-3),var(--gray-5) 15%,var(--gray-4));
+  }
+  .redesign-container p.function-label {
+    color: #268dca;
+  }
+  .mw-btn-outline-orange {
+    background: #ff00001c;
+    border: 1px solid #fb5a0069;
+    border-radius: 6px;
+    color: #fb5a00c2;
+  }
+  .little_gems .little-gems-sub-header {
+    color: #1d73a6;
+  }
+  .usage_notes p {
+    color: #9ca6b0;
+  }
+  .content-section-with-header .content-section-header {
+    background: #223039;
+  }
+  .content-section-with-header .content-section-header .h2, .content-section-with-header .content-section-header h2 {
+    -webkit-text-fill-color: unset;
+  }
+  .read-more-content-hint-container:not(.toggled)::after {
+    box-shadow: 0 -18px 12px 13px #50535a21,0 7px 40px 78px #eeeeee2e;
+  }
+  .read-more-content-hint-container .read-more-content-hint-toggler {
+    border: unset;
+  }
+  .left-content a:not(.btn) {
+    color: #4a85a6;
+  }
+  .content-section-with-header .content-section-sub-header,
+  .word-history {
+    color: #6c8093;
+  }
+  #related-articles .article-card,
+  #podcast .art19-web-player, #podcast-anchor .art19-web-player {
+    border: 4px solid #2a4760;
+  }
+  #definition-fixed-wrapper.fixed-wrapper .rail-abl-box, #definition-fixed-wrapper.fixed-wrapper .wgt-side {
+    background-color: #102327;
+  } 
+  .wotd-side__subscribe {
+    background-color: #001c22;
+  }
+  .wotd-side {
+    border: 2px solid #1f2c34;
+  }
+  .wotd-side__subscribe::after {
+    border-top: 7px solid #102327;
+  }
+  .mw-btn-outline-blue {
+    background: #034b9752;
+    border: 1px solid #244b68;
+    color: #0074cc;
+  }
+  #citations .card {
+    background: #0b3142;
+  }
+  #citations .card p {
+    color: #859193;
+  }
+  #citations select {
+    border: 1px solid #3b474d;
+    color: #6d8491;
+  }
+  .form-select {
+    background-color: #131d2b;
+  }
+  .form-control:focus {
+    color: #dbeaf9;
+  }
+  
+  #definition-wrapper .left-content h1 {
+    color: #b5c0cb;
+  }
+  #definition-wrapper .left-content .mw-list, #definition-wrapper .left-content p {
+    color: #8b939c;
+  }
+  #definition-wrapper .left-content .mw-list a, #definition-wrapper .left-content p a {
+    color: #68bfdd;
+  }
+  
+  .button-switcher-container .btn-toggle.active>.btn-switch,
+  .top-header .search-button.search-thesaurus {
+    background: #933600;
+    border-bottom: 2px solid #642d00;
+  } .thesaurus-lookup .left-sidebar ul.nav li.nav-item a.active:not(.show):before {
+    filter: brightness(80%);
+  }
+  .thesaurus-lookup .left-sidebar ul.nav li.nav-item a.active:not(.show):after,
+  .sense .thes-relevance-meter .meter .color-1,
+  .sense .thes-list.sim-list-scored .lozenge.color-4 {
+    background: #b94300;
+    color: #f3f3f3;
+  } .sense .thes-list.sim-list-scored .lozenge.color-3, .sense .thes-relevance-meter .meter .color-2 {
+    background: #80482ac7;
+    color: #c8c8c8;
+  } .sense .thes-list.sim-list-scored .lozenge.color-2, .sense .thes-relevance-meter .meter .color-3 {
+    background: #7548297d;
+    color: #a4a4a4;
+  } .sense .thes-list.sim-list-scored .lozenge.color-1 {
+    background: #5c260045;
+    color: #626262;
+  } .sense .thes-relevance-meter .meter .color+.color {
+    border-left: transparent;
+  }
+  .sense .thes-list-header:before, .vg .vg-sseq-entry-item .vg-sseq-entry-item-label.bullet-only:before {
+    background-color: #76858b;
+    border: 8.5px solid #3e3e3e;
+  }
+  .try-this-module .try-this-module-content {
+    color: #a24700;
+  }
+  .try-this-module .try-this-module-content .try-this-header {
+    color: #868d95;
+  }
+  
+  
+  /* live elements */
+  .games-landing-page-redesign-container .games-landing-section-col:after {
+    background: #0a0a0a;
+  } .games-landing-page-redesign-container .large-view .games-landing-section-img-panel-overlay div:first-child {
+    background: hsl(191deg 66% 9%);
+  } .games-landing-page-redesign-container .games-landing-section-col button.gold {
+    background: #423300!important;
+    border: 1px solid #c5a33236!important;
+    color: #87a8bf!important;
+  } .games-landing-page-redesign-container .games-landing-section-col:before {
+    background: #242424;
+    border: 6px solid #074f6c;
+  } .games-landing-page-redesign-container .large-view .games-landing-section-img-panel-overlay .games-landing-section-col-text {
+    color: #52a2db;
+  }
+  #unabridged-promo {
+    background-image: linear-gradient(180deg,#060606,#151515);
+  }
+}
