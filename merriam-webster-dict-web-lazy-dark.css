@@ -176,6 +176,9 @@
   .vg .vg-sseq-entry-item .sb .sb-entry .mw_t_d_link, .vg .vg-sseq-entry-item .sb .sb-entry .mw_t_sx {
     color: #3384c2;
   }
+  .vg .vg-sseq-entry-item .sb .sb-entry .sub-num {
+    color: #787e85;
+  }
   .entry-uros .uro .utxt .sub-content-thread .thread-anchor, .redesign-container .sub-content-thread .thread-anchor, .threaded-content-gray, .vg .vg-sseq-entry-item .sb .sb-entry .pseq .sub-content-thread .thread-anchor, .vg .vg-sseq-entry-item .sb .sb-entry .sense .sub-content-thread .thread-anchor, .word-history .sub-content-thread .thread-anchor { /* example on meaning vertical line */
     background: linear-gradient(180deg,var(--gray-3),var(--gray-5) 15%,var(--gray-4));
   }
