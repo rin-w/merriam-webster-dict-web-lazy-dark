@@ -125,7 +125,7 @@
     background: #7a1014;
     border-bottom: 2px solid #390007;
   }
-  img[src="/dist-cross-dungarees/2023-04-24_20-07-11-e04c26f6/images/svg/redesign/ribben.svg"] {
+  .left-sidebar ul.nav li.nav-item a.active span.nav-item-link-container > img[src*="ribben.svg"] {
     filter: saturate(50%) brightness(95%);
   }
   .left-sidebar-col .left-sidebar .sidebar-container .sidebar-nav li.nav-item a.active {
