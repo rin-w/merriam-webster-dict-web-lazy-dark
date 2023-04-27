@@ -151,9 +151,6 @@
   .entry-header {
     margin-top: 1em;
   } 
-  .entry-uros .ure {
-    background-image: linear-gradient(90deg,var(--gray-8),rgb(148 158 169) 34.96%,var(--gray-7));
-  }
   .redesign-container .il.il-badge,
   .mw-badge-gray-100,
   .entry-header .entry-header-content .entry-numbers-badge {
@@ -179,15 +176,18 @@
   .vg .vg-sseq-entry-item .sb .sb-entry .sub-num {
     color: #787e85;
   }
+  .entry-uros .ure {
+    background-image: linear-gradient(90deg,var(--gray-8),rgb(148 158 169) 34.96%,var(--gray-7));
+  }
   .entry-uros .uro .utxt .sub-content-thread .thread-anchor, .redesign-container .sub-content-thread .thread-anchor, .threaded-content-gray, .vg .vg-sseq-entry-item .sb .sb-entry .pseq .sub-content-thread .thread-anchor, .vg .vg-sseq-entry-item .sb .sb-entry .sense .sub-content-thread .thread-anchor, .word-history .sub-content-thread .thread-anchor { /* example on meaning vertical line */
     background: linear-gradient(180deg,var(--gray-3),var(--gray-5) 15%,var(--gray-4));
   }
   .entry-uros .uro .uro-content:before {
-    background-color: #5c6568;
-    border: 3px solid #8d8d8d;
+    background-color: #456873;
+    border: 3px solid var(--deeper-blue);
   }
   .entry-uros .uro .uro-content:after {
-    background: linear-gradient(180deg,#282c2e,rgb(137 149 155 / 48%) 21.21%,rgb(197 211 217 / 48%) 78.8%,rgb(185 200 207 / 90%));
+    background: linear-gradient(180deg, #27292a, #4f575c 21.21%, #738291 78.8%, #798597);
   }
   .redesign-container p.function-label {
     color: #268dca;
